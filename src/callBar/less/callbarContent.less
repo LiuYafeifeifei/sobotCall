@@ -1,0 +1,33 @@
+#callBarRoot {
+    .call_bar_wrap {
+        &.open {
+            .content {
+                visibility: visible;
+            } 
+        }
+        &.close {
+            .content {
+                visibility: hidden;
+            }
+        }
+        .content {
+            width: 300px;
+            height: 456px;
+            position: absolute;
+            top: 43px;
+            left: -50px;
+            z-index: 1002;
+            background: #fff;
+            &::before{
+                display: block;
+                content: '';
+                border-width: 2px 8px 8px 8px;
+                border-style: solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                left: 145px;
+                top: -10px;
+            }
+        }
+    }
+}

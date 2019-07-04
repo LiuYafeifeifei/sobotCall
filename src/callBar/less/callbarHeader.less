@@ -1,0 +1,116 @@
+#callBarRoot {
+	.call_bar_wrap {
+		width: 200px;
+		height: 36px;
+		padding: 0 12px;
+		background: #0cc3c3;
+		border-radius: 18px;
+		position: relative;
+		box-sizing: border-box;
+		* {
+			box-sizing: border-box;
+			font-size: 14px;
+			margin: 0;
+			padding: 0;
+		}
+		&:hover {
+			background: #0DD6D6;
+		}
+		&.open {
+			.arrow {
+				background-position: -131px -65px;
+			}
+		}
+		&.close {
+			.arrow {
+				background-position: -131px -85px;
+			}
+		}
+		.header {
+			height: 100%;
+			cursor: pointer;
+			padding-top: 5px;
+			position: relative;
+			&::after{
+				content: '';
+				display: block;
+				height: 0;
+				clear: both;
+			}
+			&>span {
+				float: left;
+				font-size: 14px;
+				color: #fff;
+				display: inline-block;
+			}
+			.call_way_icon {
+				width: 26px;
+				height: 26px;
+				margin: 0px 8px 0 0;
+				border-radius: 18px;
+				background-color: white;
+				background-image: url(../images/callCenterSprit.png);
+				&::before {
+					visibility: hidden;
+					font-size: 12px;
+					position: absolute;
+					z-index: 1005;
+					bottom: 17px;
+					left: 27px;
+					-ms-transform: translateX(-50%);
+					transform: translateX(-50%);
+					pointer-events: none;
+					margin-bottom: -2.9em;
+					white-space: nowrap;
+					padding: 0px 6px;
+					border-radius: 3px;
+					color: #fff;
+					background: #3D4966;
+					height: 20px;
+					line-height: 20px;
+					box-shadow: 0px 0px 4px 0px rgba(61, 73, 102, 0.2);
+				}
+				&:hover {
+					&::before {
+						visibility: visible;
+					}
+				}
+				&.softPhone {
+					background-position: -4px -5px;
+					&::before {
+						content: "网络电话接听";
+					}
+				}
+				&.sip {
+					background-position: -28px -5px;
+					&::before {
+						content: "sip话机接听";
+					}
+				}
+				&.phone {
+					background-position: -52px -5px;
+					&::before {
+						content: "手机接听";
+					}
+				}
+			}
+			.current_status_text {
+				margin: 0 10px 0 0 ;
+				height: 26px;
+				line-height: 26px;
+			}
+			.status_time {
+				line-height: 26px;
+			}
+			.arrow {
+				position: absolute;
+				top: 17px;
+				right: 8px;
+				display: inline-block;
+				width: 6px;
+				height: 3px;
+				background-image: url(../images/callCenterSprit.png);
+			}
+		}
+	}
+}

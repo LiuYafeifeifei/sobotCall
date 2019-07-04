@@ -3,5 +3,5 @@ import ReactDom, { render } from 'react-dom';
 import CallBar from './callBar';
 render(
 	<CallBar />,
-  	document.getElementById('root')
+  	document.getElementById('callBarRoot')
 )
